@@ -6,7 +6,7 @@
 Desenvolvi essa landing page com o tema de um hobby o qual eu gosto bastante, o motocross, usando uma das marcas mais renomadas dessa área. Pude compreender melhor o funcionamento da tag media query para cria responsividade tanto para dispositivos mobile quanto para tablet´s. Esse projeto me fez perceber que apenas com HTML e CSS é possível fazer algo muito bom esteticamente.
 
 ![preview](./ktm.gif)<br>
-🔗[Clique aqui para acessar o projeto!](https://pedrodevvv.github.io/Landing-Page-KTM/)
+🔗[Clique aqui para acessar o projeto!](https://landing-page-ktm.vercel.app/)
 ## 🛠️Tecnologias
 
 * HTML
