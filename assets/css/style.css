@@ -14,7 +14,7 @@
 }
 
 /*event form*/
-#event-description {
+#event-subscription {
     background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/ktm4.jpg);
     background-position: center;
     background-size: cover;
@@ -23,11 +23,13 @@
     justify-content: space-around;
     align-items: center;
     color: var(--text-color);
+    animation: fromBottom 3s;
 }
 
 #disclaimer h2,
 #disclaimer .event-date {
     color: var(--primary);
+    animation: fromTop 3s;
 }
 
 #disclaimer h2 {
@@ -41,6 +43,8 @@
     max-width: 350px;
     font-weight: bold;
     margin-bottom: 1em;
+    animation: fromBottom 3s;
+
 }
 
 #disclaimer p {
@@ -50,6 +54,8 @@
 
 #disclaimer .event-date {
     font-weight: bold;
+    animation: fromBottom 3s;
+
 }
 
 #subscription-form {
@@ -57,6 +63,7 @@
     padding: 2em;
     max-width: 22%;
     border-radius: 8px;
+    animation: fromTop 3s;
 }
 
 #subscription-form p {
@@ -75,6 +82,7 @@
     color: var(--primary);
     margin-bottom: .3em;
     font-weight: bold;
+    animation: fromBottom 3s;
 }
 
 .form-group input,
@@ -83,6 +91,12 @@
     border-radius: 5px;
     border: none;
     outline: none;
+    animation: fromTop 3s;
+}
+
+.date {
+    animation: fromTop 3s;
+
 }
 
 .btn {
@@ -96,6 +110,7 @@
     opacity: 0.8;
     border-radius: 7px;
     transition: 0.5s;
+    animation: fromBottom 5s;
 }
 
 .btn:hover {
@@ -314,7 +329,7 @@
     }
 
     #subscription-form {
-        max-width: 70%;
+        max-width: 60%;
         margin-bottom: 2em;
     }
 
@@ -393,5 +408,77 @@
     /* Call to Action Section */
     #cta .btn {
         width: 80%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    /* Event form */
+    #event-subscription {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #subscription-form {
+        max-width: 60%;
+        margin-bottom: 2em;
+        margin-top: 10px;
+    }
+
+    #disclaimer h2 {
+        margin-bottom: 0.5em;
+        margin-top: 1em;
+    }
+
+    /* Benefits section */
+    .benefits {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 2em;
+    }
+
+    .benefit {
+        max-width: 100%;
+        margin-bottom: 2em;
+    }
+
+    /*event detail*/
+    .detail {
+        flex-direction: column;
+        margin-bottom: 0.5em;
+        gap: 0;
+    }
+
+    .detail img {
+        width: 100%;
+        margin: 2em 0;
+    }
+}
+
+/*animation*/
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-260px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
